@@ -8,31 +8,36 @@ if(nameEnter) nameEnter = nameEnter.trim();
 }while(!nameEnter)
 
 
-let lastNaneEnter;
+let lastNameEnter;
 do{
-    lastNaneEnter = prompt(`Enter Your last Name `);
-    if(lastNaneEnter) lastNaneEnter = lastNaneEnter.trim();
-    }while(!lastNaneEnter)
+    lastNameEnter = prompt(`Enter Your last Name `);
+    if(lastNameEnter) lastNameEnter = lastNameEnter.trim();
+    }while(!lastNameEnter)
     
 
 let emailEnter;
 do{
     emailEnter = prompt(`Enter Your email `);
-    if(emailEnter) emailEnter = emailEnter.replaceAll(` `,` `).toLowerCase()
+    if(emailEnter) emailEnter = emailEnter.replaceAll(` `,` `).toLowerCase().trim()
     }while(!emailEnter || !emailEnter.includes(`@`) || !emailEnter.indexOf(`@`) === -1)
-    console.log(emailEnter)
+    
 
 
 let earEnter = prompt (` Enter yuo age?`);
+if(emailEnter) emailEnter = emailEnter.replaceAll(` `,` `).trim()
 while(!earEnter || isNaN(earEnter)){
     earEnter = prompt (` What yuor name?`);
 }
 let age = new Date().getFullYear() - earEnter;
 
-console.log(nameEnter)
-console.log(lastNaneEnter)
-console.log(emailEnter)
-console.log(age)
+
+
+document.write
+(`<ul>
+		<li>Full name:${nameEnter}  ${lastNameEnter}</li>
+		<li>Email:${emailEnter} </li>
+        <li>Age:${age}</li>
+  </ul>`);
 
 
 
