@@ -1,43 +1,46 @@
 
 
 
-let nameEnter;
-do{
-nameEnter = prompt(`Enter Your Name`);
-if(nameEnter) nameEnter = nameEnter.trim();
-}while(!nameEnter)
+let enterWorda;
+let enterWordb;
+let entWords = 3;
+let finalStr = ` `;
+
+let entConf = confirm(`Tell me three most important words 💚.`);
+
+   if(entConf) {
+   for(let i = 1; i <= entWords; i++){
+    do{
+     enterWorda = prompt(`Enter word #${i} `);
+    }while( !enterWorda )
+
+    do{
+     enterWordb = prompt(`choose type of transformation for #${enterWorda}  uppercase | lovercase | capitalize `);
+    }while( !enterWordb )
+     finalStr += `${enterWorda}`;
+     finalStr = finalStr.trim()
+     if(enterWordb = `uppercase `) {
+        console.log(enterWorda.toUpperCase())
+    }if(enterWordb = `lovercase`){
+        console.log(enterWorda.toLowerCase()) 
+    }if(enterWordb = `capitalize`){
+        console.log(enterWorda.toLowerCase()) 
+    }
+   }
+} 
 
 
-let lastNameEnter;
-do{
-    lastNameEnter = prompt(`Enter Your last Name `);
-    if(lastNameEnter) lastNameEnter = lastNameEnter.trim();
-    }while(!lastNameEnter)
-    
-
-let emailEnter;
-do{
-    emailEnter = prompt(`Enter Your email `);
-    if(emailEnter) emailEnter = emailEnter.replaceAll(` `,` `).toLowerCase().trim()
-    }while(!emailEnter || !emailEnter.includes(`@`) || !emailEnter.indexOf(`@`) === -1)
-    
-
-
-let earEnter = prompt (` Enter yuo age?`);
-if(emailEnter) emailEnter = emailEnter.replaceAll(` `,` `).trim()
-while(!earEnter || isNaN(earEnter)){
-    earEnter = prompt (` What yuor name?`);
-}
-let age = new Date().getFullYear() - earEnter;
 
 
 
-document.write
-(`<ul>
-		<li>Full name:${nameEnter}  ${lastNameEnter}</li>
-		<li>Email:${emailEnter} </li>
-        <li>Age:${age}</li>
-  </ul>`);
+
+
+
+
+
+
+
+
 
 
 
