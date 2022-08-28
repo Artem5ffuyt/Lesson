@@ -1,55 +1,41 @@
+let hero = ['Ivan'];
+    hero = ['Richard'];
+let native = ['York','Of'];
+let destination = ['Poltava','In'];
 
+let rainbow = []
+    rainbow = hero.concat(native, destination).reverse()
+    rainbow.push('Gave','Battle','Vain')
+    rainbow[0] = rainbow[4];
+    rainbow[1] = rainbow[2];
+    rainbow[2] = rainbow[3];
+    rainbow[3] = rainbow[7];
+    rainbow[4] = rainbow[6];
+    rainbow[5] = rainbow[7];
+   
+    rainbow.length = 7;
 
-let entConf = confirm(`Tell me three most important words 💚`);
+let colors = [`red`, `orange`, `yellow`, `green`, `blue`, `indigo`, `pink`]
 
-if (entConf) {
-  const threeWords = 3;
-  let  enterWords = ` `;
-  
-
-  for (let i = 1; i <= threeWords; i++) {
-    let word;
-    do {
-      word = prompt(`Enter word #${i}`);
-    } while (!word || word.match(/\d/));
-
-
-
-    let choicePrompt;
-    do {
-        choicePrompt = prompt(`uppercase, lowercase, capitalize`);
-      if(choicePrompt) choicePrompt = choicePrompt.replaceAll(` `,``).toLowerCase();
-    } while (!choicePrompt || (choicePrompt !== `uppercase` && choicePrompt !== `lowercase` && choicePrompt !== `capitalize`));
-
-
-    switch (choicePrompt) {
-      case `uppercase`:
-        word = word.toUpperCase();
-        break;
-      case `lowercase`:
-        word = word.toLowerCase();
-        break;
-      case `capitalize`:
-        word = word[0].toUpperCase() + word.slice(1).toLowerCase();
-        break;
-    }
-
-    enterWords += word;
-    enterWords += i === threeWords ? `!` : ` `;
-  }
-
-  console.log( enterWords);
+document.write(`<div style = " display: flex;
+                               margin: 10% auto;" >`)
+for( let i = 0; i<rainbow.length; i++){
+    document.write(`<div>
+    <span>${rainbow[i]}</span>
+    <div style  = "background:${colors[i]};
+                   width:30px; height:30px;
+                   border-radius:50%;
+                   margin: 20% auto;
+                   margin-right: 10px;
+                   "></div>
+        </div>`)
+   
+   
 }
 
+document.write(`</div>`)
 
-
-
-
-
-
-
-
-
+console.log(rainbow)
 
 
 
